@@ -14,6 +14,8 @@ import Post from "./Post";
 import PostList from "./PostList";
 import ProtectedRoute from "./ProtectedRoutes";
 import Stat from "./Stat";
+import Home from "./Home";
+
 
 function AppLayout() {
     const [user, setUser] = useState(null);
@@ -22,6 +24,14 @@ function AppLayout() {
         alert("bạn đã đăng xuất thành công");
     }
 
+    function NoMatch() {
+        return (
+            <div style={{ padding: 20 }}>
+                <h2>404: Page Not Found</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+            </div>
+        );
+    }
     return (
         <>
             <nav style={{ margin: 10 }}>
